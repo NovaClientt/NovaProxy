@@ -30,7 +30,6 @@
 <img src="https://cdn.simpleicons.org/cloudflare/0055DC" width="90">
 
 ---
-
 👤 User
 │ Request proxy
 ▼
@@ -70,6 +69,7 @@ Client → Assigned Proxy → Target Server
 ┌──────────────┐
 │ Target Server│
 └──────────────┘
+```
 
 🛡️ The target server only sees NovaProxy.
 🔍 Connection Analysis (Internal)
@@ -80,15 +80,13 @@ Client → Assigned Proxy → Target Server
 🧠 Validate rules & target
 🔐 Isolate client IP
 🚀 Forward connection
-
 👉 No data leaves our infrastructure
+
 🔐 IP Isolation
 <img src="https://cdn.simpleicons.org/letsencrypt/28a745" width="90">
 
 ❌ Client → Target Server
 ✅ Client → NovaProxy → Target Server
-
-Target server receives:
 
 IP Address: NovaProxy
 Client IP: hidden
@@ -96,17 +94,17 @@ Client IP: hidden
 ⚙️ Core Features
 <img src="https://cdn.simpleicons.org/gear/007ACC" width="90">
 
-    🔐 Full client IP protection
+🔐 Full client IP protection
 
-    🌐 Proxy assignment via platform
+🌐 Proxy assignment via platform
 
-    🧱 No direct client → server connections
+🧱 No direct client → server connections
 
-    🧠 Internal analysis & routing
+🧠 Internal analysis & routing
 
-    🖧 Own IPs & infrastructure
+🖧 Own IPs & infrastructure
 
-    ⚡ Low-latency forwarding
+⚡ Low-latency forwarding
 
 🛠️ Example Configuration
 <img src="https://cdn.simpleicons.org/yaml/CB171E" width="90">
@@ -126,25 +124,26 @@ privacy:
 🔐 Security & Privacy
 <img src="https://cdn.simpleicons.org/shield/4CAF50" width="90">
 
-    ✔ No third-party routing
+✔ No third-party routing
 
-    ✔ No VPN services
+✔ No VPN services
 
-    ✔ No shared proxy networks
+✔ No shared proxy networks
 
-    ✔ Fully self-hosted
+✔ Fully self-hosted
 
 ⚠️ NovaProxy is the single connection point.
+
 🚀 Use Cases
 <img src="https://cdn.simpleicons.org/rocket/FF9800" width="90">
 
-    🕶️ Play without IP leaks
+🕶️ Play without IP leaks
 
-    🧪 Protected server access
+🧪 Protected server access
 
-    🏗️ Dedicated proxy assignments
+🏗️ Dedicated proxy assignments
 
-    🔒 Additional security layer
+🔒 Additional security layer
 
 🗺️ Roadmap
 <img src="https://cdn.simpleicons.org/map/9C27B0" width="90">
@@ -163,4 +162,6 @@ privacy:
 NovaProxy is not a middleman —
 NovaProxy is the connection point.
 
-    Everything goes through us.
+Everything goes through us.
+
+
