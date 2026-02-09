@@ -39,7 +39,7 @@
 📦 Dedicated Proxy
 │ join proxy123.novaproxy.net
 ▼
-🖧 NovaProxy Infrastructure
+🖧 The Minecraft Server
 ```
 
 - ❌ No third-party providers  
