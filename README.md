@@ -1,201 +1,161 @@
-````md
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="80">
+
 # 🌌 NovaProxy  
-### 🔒 Controlled Minecraft Proxy Infrastructure
+### 🔒 Private Minecraft Proxy Infrastructure
 
-> **Alle Verbindungen laufen ausschließlich über NovaProxy.**  
-> Kein direkter Client-Kontakt, keine Drittanbieter, keine IP-Leaks.
+<img src="https://img.shields.io/badge/infrastructure-private-success">
+<img src="https://img.shields.io/badge/privacy-full-green">
+<img src="https://img.shields.io/badge/third--party-none-red">
 
----
-
-## 🚀 Live Connection Flow
-
-```text
-[ Client ] 
-    │
-    │  join proxy.novaproxy.net
-    ▼
-[ NovaProxy ]
-   🔍 Analyse
-   🔐 IP-Isolation
-   🧠 Routing
-    ▼
-[ Zielserver ]
-````
-
-```
-⏳ CONNECTING
-⬇
-🔍 ANALYSING
-⬇
-🔐 MASKING IP
-⬇
-🚀 FORWARDING
-⬇
-✅ CONNECTED
-```
+> **All connections run exclusively through our own infrastructure.**  
+> Proxies are **requested on our website** and **assigned directly by us**.
 
 ---
 
-## 🧠 Analyse Engine
+## 🧠 What is NovaProxy?
 
-NovaProxy verarbeitet **jede Verbindung intern**.
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" width="120">
 
-### 🔎 Was wird analysiert?
+**NovaProxy** is a fully self-managed Minecraft proxy system.
 
-| Schritt          | Status | Beschreibung             |
-| ---------------- | ------ | ------------------------ |
-| 📥 Incoming      | ✅      | Client verbindet sich    |
-| 🧠 Validation    | ✅      | Regeln & Zielprüfung     |
-| 🔐 Privacy Layer | ✅      | Client-IP bleibt intern  |
-| 📡 Forward       | ✅      | Verbindung über Proxy-IP |
-
-```text
-🧠 ANALYSE LOOP
-├─ check client
-├─ apply rules
-├─ block direct access
-└─ forward via proxy
-```
+➡️ A proxy is **requested via our website**  
+➡️ A **dedicated proxy address** is assigned  
+➡️ Players connect **only to their assigned proxy**  
+➡️ The client IP **never leaves our infrastructure**
 
 ---
 
-## 🔐 IP-Isolierung (Core Feature)
+## 🌐 Request → Assign → Connect
 
-```text
-❌ Client → Zielserver
-✅ Client → NovaProxy → Zielserver
-```
+<img src="https://cdn-icons-png.flaticon.com/512/1692/1692242.png" width="140">
 
-🛡️ **Der Zielserver sieht nur:**
+👤 User
+│ Request proxy
+▼
+🌐 NovaProxy Platform
+│ Assignment
+▼
+📦 Dedicated Proxy
+│ join proxy123.novaproxy.net
+▼
+🖧 NovaProxy Infrastructure
 
-```
-IP: NovaProxy
-Client: unknown
-```
 
-🕶️ **Die echte Client-IP verlässt NovaProxy nie.**
+✔ Proxies are provided **only by us**  
+❌ No third-party providers  
+❌ No shared external proxies  
 
 ---
 
-## 🧱 Architektur
+## 🔁 Architecture
+
+<img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" width="140">
 
 ```text
+Client → Assigned Proxy → Target Server
+
+┌──────────┐
+│  Client  │
+└────┬─────┘
+     ▼
+┌──────────────────┐
+│   NovaProxy      │  ← our IP
+│  Analysis Layer  │
+│  Routing Engine  │
+└────┬─────────────┘
+     ▼
 ┌──────────────┐
-│  Spieler     │
-│  (Client)    │
-└──────┬───────┘
-       │
-       ▼
-┌────────────────────┐
-│   NovaProxy        │
-│ 🔍 Analyse         │
-│ 🔐 Privacy Layer   │
-│ 🧠 Routing Engine  │
-└──────┬─────────────┘
-       │
-       ▼
-┌──────────────┐
-│ Zielserver   │
-│ (Minecraft)  │
+│ Target Server│
 └──────────────┘
-```
 
----
+🛡️ The target server sees only NovaProxy.
+🔍 Connection Analysis (Internal)
+<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="120">
 
-## ⚙️ Features
+Every connection is processed internally:
 
-* 🔒 **Volle IP-Abschirmung**
-* 🧠 **Echtzeit-Analyse**
-* 🧱 **Keine Direktverbindungen**
-* 🌐 **Eigene Infrastruktur**
-* ⚡ **Low-Latency Proxying**
-* 🧩 **Modular erweiterbar**
+⏳ Incoming connection
+🔎 Verify proxy assignment
+🧠 Validate rules & target
+🔐 Isolate client IP
+🚀 Forward connection
 
----
+👉 No data leaves our infrastructure
+🔐 IP Isolation
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" width="120">
 
-## 🛠️ Konfiguration (Beispiel)
+❌ Client → Target Server
+✅ Client → NovaProxy → Target Server
 
-```yml
+🕶️ Target server receives:
+
+IP Address: NovaProxy
+Client IP: hidden
+
+⚙️ Core Features
+<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" width="120">
+
+    🔐 Full client IP protection
+
+    🌐 Proxy assignment via our platform
+
+    🧱 No direct client → server connections
+
+    🧠 Internal analysis & routing
+
+    🖧 Own IPs & infrastructure
+
+    ⚡ Low-latency forwarding
+
+🛠️ Example Configuration
+<img src="https://cdn-icons-png.flaticon.com/512/919/919832.png" width="120">
+
 proxy:
   bind-ip: 0.0.0.0
   port: 25565
-
-analysis:
-  enabled: true
-  log-level: full
-
-privacy:
-  hide-client-ip: true
-  allow-direct: false
+  assigned-via: novaproxy-platform
 
 routing:
-  type: internal
-  target: mc.zielserver.net
-```
+  mode: internal
+  target-server: mc.targetserver.net
 
----
+privacy:
+  expose-client-ip: false
 
-## 📊 Status Animation (Markdown Style)
+🔐 Security & Privacy
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064201.png" width="120">
 
-```
-[■□□□□□□□□] Initializing
-[■■□□□□□□□] Loading rules
-[■■■□□□□□□] Starting analysis
-[■■■■■□□□□] Binding ports
-[■■■■■■■■■] Ready
-```
+✔ No third-party routing
+✔ No VPN services
+✔ No shared proxy networks
+✔ Fully self-hosted
 
----
+⚠️ NovaProxy is the single connection point.
+🚀 Use Cases
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="120">
 
-## 🚨 Security Notes
+    🕶️ Play without IP leaks
 
-✔ Keine Weitergabe an Dritte
-✔ Kein externer Proxy / VPN
-✔ Vollständig selbstverwaltet
-✔ Kontrollierter Datenfluss
+    🧪 Protected server access
 
-⚠️ **NovaProxy ist der einzige Verbindungspunkt.**
+    🏗️ Dedicated proxy assignments
 
----
+    🔒 Additional security layer
 
-## 🗺️ Roadmap
+🗺️ Roadmap
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" width="120">
 
-```
-[✔] Analyse Engine
+[✔] Proxy Assignment
 [✔] IP Isolation
-[✔] Internal Routing
-[ ] Multi-Target Support
-[ ] Auth Layer
-[ ] Web Dashboard
-[ ] Plugin API
-```
+[✔] Analysis Engine
+[ ] Multi-Server Routing
+[ ] Authentication Layer
+[ ] Admin Dashboard
 
----
+🌌 Summary
+<img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" width="120">
 
-## 🌌 Zusammenfassung
+NovaProxy is not a middleman —
+NovaProxy is the connection point.
 
-> **NovaProxy kontrolliert den gesamten Datenfluss.**
-> Kein Umgehen. Kein Leaken. Kein Drittweg.
-
-```
-Client  →  NovaProxy  →  Server
-```
-
----
-
-## 📜 Lizenz
-
-MIT License
-
-```
-
----
-
-Wenn du willst, mache ich dir als Nächstes:
-- 🎨 **richtiges ASCII-Logo**
-- 🧑‍💻 **Ultra-technische Dev-README**
-- 🧾 **Privacy / DSGVO-Abschnitt**
-- 🔥 **GitHub-optimierte README mit Badges**
-
-Sag einfach was 🔥
-```
+    Everything goes through us.
