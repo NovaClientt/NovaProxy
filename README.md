@@ -19,15 +19,17 @@
 
 **NovaProxy** is a fully self-hosted Minecraft proxy system.
 
-✔ Proxies are **requested via our website**  
-✔ Proxies are **assigned and managed by us**  
-✔ Players connect **only to their assigned proxy**  
-✔ The client IP **never leaves our infrastructure**
+- Proxies are **requested via our website**  
+- Proxies are **assigned and managed by us**  
+- Players connect **only to their assigned proxy**  
+- The client IP **never leaves our infrastructure**
 
 ---
 
 ## 🌐 Request → Assign → Connect
 <img src="https://cdn.simpleicons.org/cloudflare/0055DC" width="90">
+
+---
 
 👤 User
 │ Request proxy
@@ -41,18 +43,20 @@
 🖧 NovaProxy Infrastructure
 
 
-❌ No third-party providers  
-❌ No shared proxy pools  
-✅ Fully controlled by us  
+- ❌ No third-party providers  
+- ❌ No shared proxy pools  
+- ✅ Fully controlled by us  
 
 ---
 
 ## 🔁 Architecture
 <img src="https://cdn.simpleicons.org/nginx/009639" width="90">
 
-```text
+---
+
 Client → Assigned Proxy → Target Server
 
+```text
 ┌──────────┐
 │  Client  │
 └────┬─────┘
@@ -122,10 +126,13 @@ privacy:
 🔐 Security & Privacy
 <img src="https://cdn.simpleicons.org/shield/4CAF50" width="90">
 
-✔ No third-party routing
-✔ No VPN services
-✔ No shared proxy networks
-✔ Fully self-hosted
+    ✔ No third-party routing
+
+    ✔ No VPN services
+
+    ✔ No shared proxy networks
+
+    ✔ Fully self-hosted
 
 ⚠️ NovaProxy is the single connection point.
 🚀 Use Cases
@@ -155,3 +162,5 @@ privacy:
 
 NovaProxy is not a middleman —
 NovaProxy is the connection point.
+
+    Everything goes through us.
