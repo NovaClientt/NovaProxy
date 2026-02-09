@@ -1,33 +1,33 @@
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="80">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="80">
+</p>
 
-# 🌌 NovaProxy  
-### 🔒 Private Minecraft Proxy Infrastructure
+<h1 align="center">🌌 NovaProxy</h1>
+<h3 align="center">🔒 Private Minecraft Proxy Infrastructure</h3>
 
-<img src="https://img.shields.io/badge/infrastructure-private-success">
-<img src="https://img.shields.io/badge/privacy-full-green">
-<img src="https://img.shields.io/badge/third--party-none-red">
-
-> **All connections run exclusively through our own infrastructure.**  
-> Proxies are **requested on our website** and **assigned directly by us**.
+<p align="center">
+  <img src="https://img.shields.io/badge/infrastructure-private-success">
+  <img src="https://img.shields.io/badge/privacy-full-green">
+  <img src="https://img.shields.io/badge/third--party-none-red">
+  <img src="https://img.shields.io/badge/status-active-blue">
+</p>
 
 ---
 
 ## 🧠 What is NovaProxy?
+<img src="https://cdn.simpleicons.org/minecraft/62B47A" width="90">
 
-<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" width="120">
+**NovaProxy** is a fully self-hosted Minecraft proxy system.
 
-**NovaProxy** is a fully self-managed Minecraft proxy system.
-
-➡️ A proxy is **requested via our website**  
-➡️ A **dedicated proxy address** is assigned  
-➡️ Players connect **only to their assigned proxy**  
-➡️ The client IP **never leaves our infrastructure**
+✔ Proxies are **requested via our website**  
+✔ Proxies are **assigned and managed by us**  
+✔ Players connect **only to their assigned proxy**  
+✔ The client IP **never leaves our infrastructure**
 
 ---
 
 ## 🌐 Request → Assign → Connect
-
-<img src="https://cdn-icons-png.flaticon.com/512/1692/1692242.png" width="140">
+<img src="https://cdn.simpleicons.org/cloudflare/0055DC" width="90">
 
 👤 User
 │ Request proxy
@@ -41,15 +41,14 @@
 🖧 NovaProxy Infrastructure
 
 
-✔ Proxies are provided **only by us**  
 ❌ No third-party providers  
-❌ No shared external proxies  
+❌ No shared proxy pools  
+✅ Fully controlled by us  
 
 ---
 
 ## 🔁 Architecture
-
-<img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" width="140">
+<img src="https://cdn.simpleicons.org/nginx/009639" width="90">
 
 ```text
 Client → Assigned Proxy → Target Server
@@ -68,11 +67,9 @@ Client → Assigned Proxy → Target Server
 │ Target Server│
 └──────────────┘
 
-🛡️ The target server sees only NovaProxy.
+🛡️ The target server only sees NovaProxy.
 🔍 Connection Analysis (Internal)
-<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="120">
-
-Every connection is processed internally:
+<img src="https://cdn.simpleicons.org/datadog/632CA6" width="90">
 
 ⏳ Incoming connection
 🔎 Verify proxy assignment
@@ -82,22 +79,22 @@ Every connection is processed internally:
 
 👉 No data leaves our infrastructure
 🔐 IP Isolation
-<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" width="120">
+<img src="https://cdn.simpleicons.org/letsencrypt/28a745" width="90">
 
 ❌ Client → Target Server
 ✅ Client → NovaProxy → Target Server
 
-🕶️ Target server receives:
+Target server receives:
 
 IP Address: NovaProxy
 Client IP: hidden
 
 ⚙️ Core Features
-<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" width="120">
+<img src="https://cdn.simpleicons.org/gear/007ACC" width="90">
 
     🔐 Full client IP protection
 
-    🌐 Proxy assignment via our platform
+    🌐 Proxy assignment via platform
 
     🧱 No direct client → server connections
 
@@ -108,7 +105,7 @@ Client IP: hidden
     ⚡ Low-latency forwarding
 
 🛠️ Example Configuration
-<img src="https://cdn-icons-png.flaticon.com/512/919/919832.png" width="120">
+<img src="https://cdn.simpleicons.org/yaml/CB171E" width="90">
 
 proxy:
   bind-ip: 0.0.0.0
@@ -123,7 +120,7 @@ privacy:
   expose-client-ip: false
 
 🔐 Security & Privacy
-<img src="https://cdn-icons-png.flaticon.com/512/3064/3064201.png" width="120">
+<img src="https://cdn.simpleicons.org/shield/4CAF50" width="90">
 
 ✔ No third-party routing
 ✔ No VPN services
@@ -132,7 +129,7 @@ privacy:
 
 ⚠️ NovaProxy is the single connection point.
 🚀 Use Cases
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="120">
+<img src="https://cdn.simpleicons.org/rocket/FF9800" width="90">
 
     🕶️ Play without IP leaks
 
@@ -143,7 +140,7 @@ privacy:
     🔒 Additional security layer
 
 🗺️ Roadmap
-<img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" width="120">
+<img src="https://cdn.simpleicons.org/map/9C27B0" width="90">
 
 [✔] Proxy Assignment
 [✔] IP Isolation
@@ -151,11 +148,10 @@ privacy:
 [ ] Multi-Server Routing
 [ ] Authentication Layer
 [ ] Admin Dashboard
+[ ] Plugin API
 
 🌌 Summary
-<img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" width="120">
+<img src="https://cdn.simpleicons.org/eclipseide/673AB7" width="90">
 
 NovaProxy is not a middleman —
 NovaProxy is the connection point.
-
-    Everything goes through us.
