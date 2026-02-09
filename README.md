@@ -1,5 +1,3 @@
----
-
 ````md
 # 🌌 NovaProxy  
 ### 🔒 Controlled Minecraft Proxy Infrastructure
